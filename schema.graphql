@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BookEntity {
+  id: ID!
+  title: String!
+}
+
+type Query {
+  getBooks: [BookEntity!]!
+  getBook(id: Int!): BookEntity!
+}
+
+type Mutation {
+  addBook(newBook: BooksDto!): BookEntity!
+  removeBook(id: Int!): Boolean!
+}
+
+input BooksDto {
+  title: String!
+}
